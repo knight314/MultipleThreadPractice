@@ -1,0 +1,17 @@
+//
+//  MTPPrefixHeader.pch
+//  MutipleThreadPractice
+//
+//  Created by Guangyao on 16/6/28.
+//  Copyright © 2016年 Guangyao. All rights reserved.
+//
+
+#ifndef MTPPrefixHeader_pch
+#define MTPPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Masonry.h"
+
+#endif /* MTPPrefixHeader_pch */
