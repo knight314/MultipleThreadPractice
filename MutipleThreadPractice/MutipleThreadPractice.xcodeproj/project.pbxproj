@@ -17,6 +17,7 @@
 		222FABFD1D228DCB00692F24 /* MutipleThreadPracticeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 222FABFC1D228DCB00692F24 /* MutipleThreadPracticeUITests.m */; };
 		222FAC0C1D228F9E00692F24 /* DemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222FAC0B1D228F9E00692F24 /* DemoListViewController.m */; };
 		222FAC0F1D228FBA00692F24 /* NSOperationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222FAC0E1D228FBA00692F24 /* NSOperationDemoViewController.m */; };
+		22CDC1D61D3224BD005594E6 /* DownloadImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CDC1D51D3224BD005594E6 /* DownloadImageOperation.m */; };
 		FA260386866DCB23C4D912F4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3894BA15EA80765ED78CBA30 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,8 @@
 		222FAC0D1D228FBA00692F24 /* NSOperationDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSOperationDemoViewController.h; sourceTree = "<group>"; };
 		222FAC0E1D228FBA00692F24 /* NSOperationDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSOperationDemoViewController.m; sourceTree = "<group>"; };
 		2262ADFF1D22965200CD6039 /* MTPPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPPrefixHeader.pch; sourceTree = "<group>"; };
+		22CDC1D41D3224BD005594E6 /* DownloadImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadImageOperation.h; sourceTree = "<group>"; };
+		22CDC1D51D3224BD005594E6 /* DownloadImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadImageOperation.m; sourceTree = "<group>"; };
 		3894BA15EA80765ED78CBA30 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8D586AC2A94CE66AD87041 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +132,8 @@
 				222FABE81D228DCB00692F24 /* Info.plist */,
 				222FABD71D228DCB00692F24 /* Supporting Files */,
 				2262ADFF1D22965200CD6039 /* MTPPrefixHeader.pch */,
+				22CDC1D41D3224BD005594E6 /* DownloadImageOperation.h */,
+				22CDC1D51D3224BD005594E6 /* DownloadImageOperation.m */,
 			);
 			path = MutipleThreadPractice;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				222FABD91D228DCB00692F24 /* main.m in Sources */,
 				222FAC0C1D228F9E00692F24 /* DemoListViewController.m in Sources */,
 				222FAC0F1D228FBA00692F24 /* NSOperationDemoViewController.m in Sources */,
+				22CDC1D61D3224BD005594E6 /* DownloadImageOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

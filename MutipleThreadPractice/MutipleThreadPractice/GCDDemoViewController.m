@@ -33,7 +33,7 @@
 
 -(NSArray *)selectorArray{
     if (!_selectorArray) {
-        _selectorArray=@[ NSStringFromSelector(@selector(syncSerial)),NSStringFromSelector(@selector(syncConcurrent)),NSStringFromSelector(@selector(asyncSerial)),NSStringFromSelector(@selector(asyncConcurrent))];
+        _selectorArray=@[ NSStringFromSelector(@selector(syncSerial)),NSStringFromSelector(@selector(syncConcurrent)),NSStringFromSelector(@selector(asyncSerial)),NSStringFromSelector(@selector(asyncConcurrent)),NSStringFromSelector(@selector(dispatchGroup)),NSStringFromSelector(@selector(dispatch_barrier_async))];
    
     }
     return _selectorArray;
@@ -62,6 +62,7 @@
 
     // Do any additional setup after loading the view, typically from a nib.
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -177,6 +178,51 @@
 
 }
 
+
+-(void)dispatchGroup{
+
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"download image 1");
+        /*加载图片1 */ });
+    dispatch_group_async(group, queue, ^{
+         NSLog(@"download image 2");
+        /*加载图片2 */ });
+    dispatch_group_async(group, queue, ^{
+         NSLog(@"download image 3");
+        /*加载图片3 */ });
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        // 合并图片
+        NSLog(@"combine download images");
+    });
+
+}
+
+-(void)dispatch_barrier_async{
+    
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("my.concurrent.queue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(concurrentQueue, ^(){
+        NSLog(@"dispatch-1");
+    });
+    dispatch_async(concurrentQueue, ^(){
+        NSLog(@"dispatch-2");
+    });
+    dispatch_barrier_async(concurrentQueue, ^(){
+        NSLog(@"dispatch-barrier");
+    });
+    dispatch_async(concurrentQueue, ^(){
+        NSLog(@"dispatch-3");
+    });
+    dispatch_async(concurrentQueue, ^(){
+        NSLog(@"dispatch-4");
+    });
+    
+    
+    
+    
+}
 #pragma mark - table view datasource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
